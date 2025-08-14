@@ -12,8 +12,8 @@ import time
 import random
 
 # Telegram Bot Configuration
-TELEGRAM_BOT_TOKEN = '6906694967:AAF0D8H49-5DRIe__DLAnxn_aT7VSCoENqE'
-TELEGRAM_CHAT_ID = '-1002127106440'
+TELEGRAM_BOT_TOKEN = '8044879295:AAEveU-Siij1cMUedBgX8dqjQGz5cmJoIYo'
+TELEGRAM_CHAT_ID = '-1002872387297'
 
 def send_telegram_alert(message, image_path=None):
     """Send alert to Telegram bot"""

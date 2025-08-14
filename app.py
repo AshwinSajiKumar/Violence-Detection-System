@@ -139,6 +139,8 @@ if video_file is not None:
     
     if st.button("🔍 Analyze Video", type="primary", use_container_width=True):
         with st.spinner("Processing..."):
+            # Create temp directory if it doesn't exist
+            os.makedirs("temp", exist_ok=True)
             temp_video_path = "temp/uploaded_media.mp4"
             with open(temp_video_path, "wb") as f:
                 f.write(video_file.getbuffer())

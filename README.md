@@ -104,6 +104,12 @@ TELEGRAM_BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE'
 TELEGRAM_CHAT_ID = 'YOUR_CHAT_ID_HERE'
 ```
 
+### **See the Bot in Action!**
+Before setting up your own bot, **join our demo Telegram group** to see how the violence detection alerts work:
+- **Group Link**: [https://t.me/+3k0em88gfWc0Y2U1](https://t.me/+3k0em88gfWc0Y2U1)
+- **See real alerts** with violence frames and face detection
+- **Experience the full functionality** before deployment
+
 ### **Bot Features:**
 When violence is detected, the bot automatically:
 1. **Sends Text Alert** with location and timestamp

@@ -12,13 +12,21 @@ import time
 import random
 
 # Telegram Bot Configuration
-TELEGRAM_BOT_TOKEN = '8044879295:AAEveU-Siij1cMUedBgX8dqjQGz5cmJoIYo'
-TELEGRAM_CHAT_ID = '-1002872387297'
+def _get_secret(name, default=""):
+    try:
+        return st.secrets.get(name, os.environ.get(name, default))
+    except Exception:
+        return os.environ.get(name, default)
+
+TELEGRAM_BOT_TOKEN = _get_secret("TELEGRAM_BOT_TOKEN", "")
+TELEGRAM_CHAT_ID = _get_secret("TELEGRAM_CHAT_ID", "")
 
 def send_telegram_alert(message, image_path=None):
     """Send alert to Telegram bot"""
     try:
         import requests
+        if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
+            return
         
         # Send text message
         text_url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
